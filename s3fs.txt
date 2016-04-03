@@ -1,0 +1,16 @@
+#!/bin/bash
+mount="/var/www/html/exmaple.com"
+
+umount -l "/var/www/html/example.com"
+
+if grep -qs "$mount" /var/www/html/web/example.com; then
+  echo "It's not mounted."
+else
+  echo "It's not mounted."
+  s3fs olobolo-upload-test "$mount"
+  if [ $? -eq 0 ]; then
+   echo "Mount success!"
+  else
+   echo "Ooops some problem is there "
+  fi
+fi
