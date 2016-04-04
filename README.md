@@ -1,2 +1,2 @@
 # s3fsstatus
-this script check the  status of s3fs on server whethe it mounted or not
+This script check that your s3 bucket mounted or not via s3fs if not then It will mount bucket via s3 fs.
